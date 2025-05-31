@@ -1,1 +1,3 @@
 # ISSNotifier
+
+This Python script monitors the International Space Station's (ISS) position and checks if it's overhead a user-specified location (within ±5 degrees of latitude and longitude) during nighttime. It uses APIs to fetch real-time ISS coordinates and sunrise/sunset times for the user's location. If the ISS is overhead and it's night, the script sends an email notification to the user. The script runs in a loop, checking every 60 seconds, and can be exited by pressing the 'q' key.
