@@ -6,6 +6,8 @@ import os
 from datetime import datetime
 from dotenv import load_dotenv
 
+load_dotenv()    
+
 def is_iss_overhead(user_lat: float, user_lon: float) -> bool:
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
     response.raise_for_status()
@@ -36,8 +38,6 @@ def is_night(user_lat: float, user_lon: float) -> bool:
 
 
 def main() -> None:
-    load_dotenv()
-    
     lat = float(input("Enter your latitude (Empty or invalid for default): "))
     lon = float(input("Enter your longitude (Empty or invalid for default):"))
     email = input("Enter your email: ")
